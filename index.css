@@ -91,3 +91,8 @@ li {
     background: linear-gradient(315deg, #000c1d, #061c4b);
     border-color: rgb(75, 147, 255)
 }
+.card.d {
+    /* background: linear-gradient(315deg, #1b1b3a, #693668, #a74482); */
+    background: linear-gradient(135deg, #2a0738, #590d82, #ca1f6c);
+    border-color: rgb(217, 93, 255);
+}
