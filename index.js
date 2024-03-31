@@ -17,3 +17,6 @@ purply.href = 'https://www.youtube.com/channel/UCn4jR4dSliyvqOiQC_TuZjQ';
 // socials urls bc yea it's more compact whatever
 twt.href = 'https://twitter.com/miacolonthree';
 pspage.href = 'https://en.pronouns.page/miacolonthree';
+
+// another link
+document.querySelector('div > div > div > a').href = 'https://twitter.com/colorschemer/status/1769936852620894615';
