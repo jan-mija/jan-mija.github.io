@@ -3,9 +3,18 @@
 <head>
 	<title>countdown</title>
 	<link rel='stylesheet' type='text/css' href='index.css'>
+	<link rel='stylesheet' href='https://fonts.cdnfonts.com/css/nevis'>
 </head>
 <body align='center'>
 	<div id='main'>mewo</div>
+	<div class='smalltext'>
+		Until: June
+	</div>
+	<div class='smalltext text_lower' style='color: rgba(255, 255, 255, 0.5);'>
+		Updates every .5 seconds<br>
+		yea it's dumb<br>
+		don't look at the js pwease qwq
+	</div>
 </body>
+<script src='index.js'></script>
 </html>
-<script src='index.js' />

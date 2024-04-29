@@ -1,13 +1,21 @@
 body {
-	background-color: #111;
+	background: linear-gradient(90deg, #050505, #111, #050505);
+	color: white;
+	font-family: 'Nevis';
+	text-align: center;
 }
 
+.text_lower {
+	margin-top: 75px;
+	user-select: none;
+}
+
+.smalltext { font-size: 30px; }
+
 #main {
-	color: white;
 	font-weight: bold;
 	font-size: 200px;
-	font-family: 'Nevis';
+	text-shadow: 0 0 50px #FFFFFF55;
 
-	text-align: center;
-	margin: 200px 0 auto;
+	margin: 0 auto;
 }

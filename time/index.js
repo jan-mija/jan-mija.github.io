@@ -18,3 +18,10 @@ window.onload = function() { setInterval(update, 500); }
 function update() {
 	document.getElementById('main').innerHTML = Math.floor((until_ms - Date.now()) / 1000).toDHMS();
 }
+
+const e = document.getElementsByClassName('text_lower')[0];
+
+e.onclick = function() {
+	if (e.style.color == 'rgba(255, 255, 255, 0.5)') e.style.color = '#FFFFFF00';
+	else e.style.color = 'rgba(255, 255, 255, 0.5)';
+}

@@ -1,5 +1,5 @@
-var until_ms = 1714504402000;
-//var until_ms = 1717167600000;
+//var until_ms = 1714504402000;
+var until_ms = 1717167600000;
 
 // https://stackoverflow.com/a/2998874 by 5445/christian-c-salvad%c3%b3
 Number.prototype.pad = function(places) { return String(this).padStart(places, '0'); }
@@ -17,4 +17,11 @@ window.onload = function() { setInterval(update, 500); }
 
 function update() {
 	document.getElementById('main').innerHTML = Math.floor((until_ms - Date.now()) / 1000).toDHMS();
+}
+
+const e = document.getElementsByClassName('text_lower')[0];
+
+e.onclick = function() {
+	if (e.style.color == 'rgba(255, 255, 255, 0.467)') e.style.color = '#FFFFFF00';
+	else e.style.color = 'rgba(255, 255, 255, 0.467)';
 }
