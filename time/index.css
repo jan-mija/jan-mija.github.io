@@ -1,0 +1,13 @@
+body {
+	background-color: #111;
+}
+
+#main {
+	color: white;
+	font-weight: bold;
+	font-size: 200px;
+	font-family: 'Nevis';
+
+	text-align: center;
+	margin: 200px 0 auto;
+}
