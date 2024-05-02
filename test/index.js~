@@ -1,6 +1,0 @@
-function addElement() {
-	const titel = document.createElement('title');
-	titel.innerHTML = 'this is a title!!!!';
-	
-	document.getElementsByTagName('head')[0].appendChild(titel);
-}
