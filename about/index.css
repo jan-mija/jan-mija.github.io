@@ -1,0 +1,98 @@
+/* General elements */
+body {
+    background-color: rgb(10, 10, 10);
+}
+
+a {
+    color: rgb(224, 218, 255);
+    /* text-decoration: underline; */
+}
+
+div {
+    color: white;
+    font-family: 'Nevis', sans-serif;
+}
+
+li {
+    width: 500px;
+    text-align: left;
+}
+
+/* IDs */
+#font_switch {
+    color: white;
+    text-decoration: underline #ffffff80;
+    font-family: Consolas;
+}
+#font_switch:hover {
+    text-decoration: underline white;
+}
+
+/* Classes */
+.list {
+    display: inline-block;
+}
+
+.card {
+    width: 75%;
+    height: 250px;
+    margin: 10px auto 10px;
+
+    text-align: center;
+    text-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.3);
+    background-color: gray;
+    border: gray solid 5px;
+    border-radius: 20px;
+
+    transition: .25s ease-out;
+}
+.card:hover {
+    transform: translate(0, -10px);
+    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.3),
+                inset 0 -50px 50px -50px #ffffff80;
+    background-color: black;
+}
+
+.card_group {
+    text-align: center;
+}
+
+.halfcard {
+    margin: 10px;
+    width: calc(37.5% - 20px);
+    display: inline-table;
+}
+
+.card div:not(.card_title) {
+    font-size: 20px;
+}
+
+.card_title {
+    padding-top: 10px;
+    width: 100%;
+    height: 20%;
+    
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Cards */
+.card.a {
+    background: linear-gradient(.375turn, rgb(41, 41, 131), rgb(175, 175, 255));
+    border-color: rgb(127, 127, 255);
+}
+.card.b {
+    background: linear-gradient(135deg, #ff63b9, #ffe2b6);
+    border-color: #ffb1ee;
+}
+.card.c {
+    background: linear-gradient(315deg, #000c1d, #061c4b);
+    border-color: rgb(75, 147, 255)
+}
+.card.d {
+    /* background: linear-gradient(315deg, #1b1b3a, #693668, #a74482); */
+    background: linear-gradient(135deg, #2a0738, #590d82, #ca1f6c);
+    border-color: rgb(217, 93, 255);
+}
