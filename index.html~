@@ -5,6 +5,7 @@
 	<link rel='stylesheet' href='./index.css'>
 </head>
 <body>
+	<div style='background-color: #999; height: 50vh;'></div>
 	<div class='container'>
 	    <div class='panel'>
 		About
