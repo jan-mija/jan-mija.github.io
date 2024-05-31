@@ -1,11 +1,46 @@
+@keyframes background-pan {
+	from {
+	    background-position: 0% center;
+	}
+	to {
+	    background-position: -200% center;
+	}
+}
+
 body {
-	background-color: #000;
+	background: linear-gradient(to right, #541389 5%, #c45ab4, #fe6f61, #c45ab4, #541389);
+	background-size: 200%;
+	animation: background-pan 10s linear infinite;
+
+	height: 100vh;
+	overflow: hidden;
 
 	color: white;
 	font-family: Consolas, Arial;
 }
 
-.container {
+#tiles {
+	height: 100vh;
+	width: 100vw;
+
+	display: grid;
+	grid-template-columns: repeat(var(--cols), 1fr);
+	grid-template-rows: repeat(var(--rows), 1fr);
+}
+
+.tile {
+	position: relative;
+	transform: translate(-8px, -8px);
+}
+
+.tile:before {
+	background-color: #111;
+	content: '';
+	inset: 0.5px;
+	position: absolute;
+}
+
+#container {
 	position: absolute;
 	top: 15%;
 	left: 20%;
@@ -21,6 +56,7 @@ body {
 	padding: 25px;
 	border: solid #FFFFFF22 2px;
 	border-radius: 10px;
+	background-color: black;
 
 	font-weight: bold;
 	text-align: center;
@@ -31,9 +67,9 @@ body {
 
 .panel:hover {
 	transform: translate(0, -5px);
-	box-shadow: 0 0 25px #FFFFFF22;
+	box-shadow: 0 0 25px #FFFFFF38;
 	border-color: #FFFFFF88;
-	background-color: #FFFFFF05;
+	background-color: #080808;
 }
 
 .link > span {
