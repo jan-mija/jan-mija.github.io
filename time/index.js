@@ -1,5 +1,6 @@
 //var until_ms = 1714504402000;
-var until_ms = 1717156800000;
+const until_ms = 1717156800000;
+var isActive = false;
 
 // https://stackoverflow.com/a/2998874 by 5445/christian-c-salvad%c3%b3
 Number.prototype.pad = function(places) { return String(this).padStart(places, '0'); }
@@ -16,7 +17,12 @@ Number.prototype.toDHMS = function() {
 window.onload = function() { setInterval(update, 500); }
 
 function update() {
-	document.getElementById('main').innerHTML = Math.floor((until_ms - Date.now()) / 1000).toDHMS();
+	let main = document.getElementById('main');
+	if (isActive) {
+		main.innerHTML = Math.floor((until_ms - Date.now()) / 1000).toDHMS();
+	} else {
+		main.innerHTML = 'Counter currently inactive!';
+	}
 }
 
 const e = document.getElementsByClassName('text_lower')[0];
