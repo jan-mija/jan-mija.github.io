@@ -49,10 +49,14 @@ window.onresize = () => {
 	setRadius();
 }
 
-document.body.onmousemove = e => {
+const handleMove = e => {
 	let x = e.clientX,
 	    y = e.clientY;
 
 	bg.style.setProperty('--x', `${x}px`);
 	bg.style.setProperty('--y', `${y}px`);
 }
+
+document.body.onmousemove = e => handleMove(e);
+
+document.body.ontouchmove = e => handleMove(e.touches[0]);
