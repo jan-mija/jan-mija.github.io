@@ -11,9 +11,6 @@ document.getElementById('font_switch').onclick = function() {
 // make all urls open in new tabs (except the font switch)
 document.querySelectorAll('a:not(#font_switch)').forEach(item => item.target = 'blank');
 
-// so it's more compact
-purply.href = 'https://www.youtube.com/channel/UCn4jR4dSliyvqOiQC_TuZjQ';
-
 // socials urls bc yea it's more compact whatever
 twt.href = 'https://twitter.com/miacolonthree';
 pspage.href = 'https://en.pronouns.page/miacolonthree';
