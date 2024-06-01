@@ -1,3 +1,7 @@
+:root {
+	--bg-color: #080808;
+}
+
 @keyframes background-pan {
 	from {
 	    background-position: 0% center;
@@ -14,12 +18,14 @@ body {
 
 	height: 100vh;
 	overflow: hidden;
+	transform: translate(-8px, 7px);
 
 	color: white;
 	font-family: Consolas, Arial;
 }
 
 #tiles {
+	position: absolute;
 	height: 100vh;
 	width: 100vw;
 
@@ -30,14 +36,22 @@ body {
 
 .tile {
 	position: relative;
-	transform: translate(-8px, -8px);
 }
 
 .tile:before {
-	background-color: #111;
+	background-color: var(--bg-color);
 	content: '';
 	inset: 0.5px;
 	position: absolute;
+}
+
+#bg {
+	background-color: var(--bg-color);
+	-webkit-mask-image: radial-gradient(var(--r) circle
+		at var(--x) var(--y), #FFFFFF00, #FFFFFFDD);
+
+	height: 100vh;
+	width: 100vw;
 }
 
 #container {

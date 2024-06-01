@@ -34,3 +34,15 @@ const createGrid = () => {
 createGrid();
 
 window.onresize = () => createGrid();
+
+const bg = document.getElementById('bg');
+
+bg.style.setProperty('--r', `${document.body.clientWidth * 0.15}px`)
+
+document.body.onmousemove = e => {
+	let x = e.clientX,
+	    y = e.clientY;
+
+	bg.style.setProperty('--x', `${x}px`);
+	bg.style.setProperty('--y', `${y}px`);
+}
