@@ -33,11 +33,21 @@ const createGrid = () => {
 
 createGrid();
 
-window.onresize = () => createGrid();
-
 const bg = document.getElementById('bg');
 
-bg.style.setProperty('--r', `${document.body.clientWidth * 0.15}px`)
+const setRadius = () => {
+	let w = document.body.clientWidth,
+	    h = document.body.clientHeight;
+
+	bg.style.setProperty('--r', `${(w > h ? w : h) * 0.15}px`);
+}
+
+setRadius();
+
+window.onresize = () => {
+	createGrid();
+	setRadius();
+}
 
 document.body.onmousemove = e => {
 	let x = e.clientX,
