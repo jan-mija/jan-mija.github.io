@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<style>
+    text {
+        font-family: 'Consolas', 'Arial', 'Times New Roman';
+    }
+</style>
+<head>
+</head>
+<body>
+    <input type='file' id='loadfile' style='display: none;'></input>
+
+    <button id='load'>Load</button>
+    <button id='clear'>Clear</button>
+    <button id='save'>Save</button>
+    
+    <div id='filename'>filename: </div>
+
+    custom filename: <input id='customfilename'></input>
+    <input type='checkbox' id='dousename'>enable</input>
+
+    <br>
+
+    <textarea id='text-area' rows='50', cols='100'></textarea>
+</body>
+<script src='./index.js'></script>
+</html>
