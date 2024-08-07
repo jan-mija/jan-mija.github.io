@@ -4,7 +4,7 @@ window.onload = () => document.querySelector('#video > iframe').src = '';
 
 vidurl.onchange = () => {
     if (re_url.test(vidurl.value)) {
-	document.querySelector('#video > iframe').src = 'https://youtube.com/embed/' + vidurl.value.match(re_url)[5];
+	document.querySelector('#video > iframe').src = 'https://youtube.com/embed/' + vidurl.value.match(re_url)[5] + '?autoplay=1&auto_play=1';
     }
 }
 
