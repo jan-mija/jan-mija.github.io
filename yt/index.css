@@ -1,0 +1,55 @@
+* {
+    font-family: 'Consolas', 'Arial';
+    color: white;
+}
+
+body {
+    background-image: linear-gradient(to right, rgb(10, 10, 10), rgb(15, 15, 15), rgb(10, 10, 10));
+}
+
+#video {
+    width: max-content;
+    margin: 18px auto;
+    text-align: center;
+
+    border: solid #FFFA 2px;
+    background-image: url('./bg.png');
+}
+
+.center {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#title {
+    font-weight: bold;
+    font-size: 60px;
+}
+
+#upper {
+    font-size: 25px;
+}
+
+#vidurl {
+    width: 350px;
+}
+
+#vidurl, #load {
+    font-size: 16px;
+    margin: 5px 0;
+
+    border-radius: 2px;
+    border: solid white 2px;
+
+    background-color: black;
+    transition: 100ms;
+}
+
+#load:hover {
+    background-color: #222;
+}
+
+#load:active {
+    background-color: #777;
+    border-color: #fffe;
+}
