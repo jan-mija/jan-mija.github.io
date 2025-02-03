@@ -12,7 +12,7 @@ body {
 	overflow: hidden;
 	transform: translate(-8px, -8px);
 
-	color: var(--text-color);
+	color: rgb(var(--text-color));
 	font-family: Consolas, Arial;
 }
 
