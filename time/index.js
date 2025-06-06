@@ -1,8 +1,7 @@
 //var until_ms = 1714504402000;
 //const until_ms = 1717156800000;
 //const until_ms = 1748736000000;
-const until_ms = 1749042000000; // DELTARUNE
-var isActive = true;
+var isActive = false;
 
 const main = document.getElementById('main');
 
