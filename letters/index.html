@@ -2,11 +2,18 @@
 <html>
 <head>
   <title>Translator the for letter cult</title>
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./fonts.css">
+  <link rel='stylesheet' href='./style.css'>
+  <link rel='stylesheet' href='/assets/fonts/fonts.css'>
 </head>
 <body>
   <h1>[text translator]</h1>
+  <center>
+    <textarea id='textin' rows='16' cols='140' placeholder='Initial text goes here...' autocomplete='off'></textarea>
+    <button id='lower'>All lowercase</button>
+    <br><div>&rarr;</div>
+    <textarea id='textout' rows="16" cols="140" placeholder='Translated text comes out here...' readonly></textarea>
+    <button id='copy'>Copy</button>
+  </center>
 </body>
 <script src='./script.js'></script>
 </html>
