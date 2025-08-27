@@ -8,10 +8,18 @@
 <body>
   <h1>[text translator]</h1>
   <center>
-    <textarea id='textin' rows='16' cols='140' placeholder='Initial text goes here...' autocomplete='off'></textarea>
-    <button id='lower'>All lowercase</button>
-    <br><div>&rarr;</div>
-    <textarea id='textout' rows="16" cols="140" placeholder='Translated text comes out here...' readonly></textarea>
+    <div class='textarea'>
+      <textarea id='textin' rows='16' cols='140' placeholder='Initial text goes here...' autocomplete='off' spellcheck='false'></textarea>
+      <div class='scanlines'></div>
+    </div>
+    <button id='fetchlist'>Fetch list</button>
+
+    <br><div id='rarr'>&rarr;</div>
+
+    <div class='textarea'>
+      <textarea id='textout' rows="16" cols="140" placeholder='Translated text comes out here...' spellcheck='false' readonly></textarea>
+      <div class='scanlines'></div>
+    </div>
     <button id='copy'>Copy</button>
   </center>
 </body>

@@ -6,10 +6,7 @@ window.onload = function () {
 
   textin.onkeyup = update;
 
-  lower.onclick = function () {
-    textin.value = textin.value.toLowerCase();
-    update();
-  }
+  fetchlist.onclick = updateList;
 
   copy.onclick = function () {
     textout.select();
@@ -31,13 +28,37 @@ var dict = {
     's': '<@698558975146459217>'
 }
 
+// thank you to Kenna Blackburn (No_Pen)
+const dbUrl = 'https://gist.githubusercontent.com/Kenna-Blackburn/571cada7154dee0c9bedc87786c691a3/raw';
+const dbRe  = /^(?!username,regex,userID)(.+),(.+),(\d+)$/gm;
+
+const getFile = () => {
+  let xmlHttp = new XMLHttpRequest();
+  xmlHttp.open('GET', dbUrl, false);
+  xmlHttp.send(null);
+
+  return xmlHttp.responseText;
+}
+
+const updateList = () => {
+  dict = {};
+
+  list = [...getFile().matchAll(dbRe)];
+  list.forEach(line => {
+    dict[line[1]] = '<@' + line[3] + '>';
+  })
+
+  console.log(dict);
+  update();
+}
+
 const update = () => {
   textout.value = translate(textin.value);
 }
 
 const translate = (s) => {
-  for (const [key, value] of Object.entries(dict)) {
-    s = s.replaceAll(new RegExp(key, 'igm'), value);
+  for (const [k, v] of Object.entries(dict)) {
+    s = s.replaceAll(new RegExp(k, 'igm'), v);
   }
 
   return (silent ? '@silent ' : '') + s;
