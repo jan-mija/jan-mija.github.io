@@ -42,9 +42,12 @@ const getFile = () => {
 }
 
 const updateList = () => {
+  file = getFile();
+  if (!file) return;
+
   dict = {};
 
-  list = [...getFile().matchAll(dbRe)];
+  list = [...file.matchAll(dbRe)];
   list.forEach(line => {
     dict[line[1]] = '<@' + line[3] + '>';
   })
